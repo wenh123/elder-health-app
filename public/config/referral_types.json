@@ -1,0 +1,7 @@
+{
+  "medical":    { "label": "醫療轉介",   "targets": ["醫療院所", "衛生所", "家醫科"] },
+  "dementia":   { "label": "失智共照",   "targets": ["失智共照中心", "神經內科"] },
+  "depression": { "label": "心理諮詢",   "targets": ["心理諮商機構", "精神科門診"] },
+  "nutrition":  { "label": "營養評估",   "targets": ["營養師", "社區共餐服務"] },
+  "hearing":    { "label": "聽力 / 輔具", "targets": ["輔具資源中心", "耳鼻喉科"] }
+}
