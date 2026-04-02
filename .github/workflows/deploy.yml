@@ -36,8 +36,9 @@ jobs:
           # 設定方式：Repository > Settings > Secrets and variables > Actions
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-          # 若倉庫名稱為 elder-health-app，改為 /elder-health-app/
-          VITE_BASE_URL: ${{ vars.VITE_BASE_URL || '/' }}
+          # 倉庫名稱為 elder-health-app → base = /elder-health-app/
+          # 若使用自訂網域，在 Repository Variables 中設 VITE_BASE_URL=/
+          VITE_BASE_URL: ${{ vars.VITE_BASE_URL || '/elder-health-app/' }}
         run: npm run build
 
       - name: Upload artifact

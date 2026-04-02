@@ -231,7 +231,7 @@ async function handleSave() {
 onMounted(async () => {
   const [elderRes, rulesRes] = await Promise.all([
     supabase.from('elders').select('*').eq('id', route.params.elderId).single(),
-    fetch('/config/icope_rules.json').then(r => r.json())
+    fetch(import.meta.env.BASE_URL + 'config/icope_rules.json').then(r => r.json())
   ])
   elder.value = elderRes.data
   rules.value = rulesRes

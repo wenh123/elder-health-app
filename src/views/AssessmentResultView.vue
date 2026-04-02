@@ -168,7 +168,7 @@ onMounted(async () => {
   const id = route.params.id
   const [aRes, sugRes] = await Promise.all([
     supabase.from('assessments').select('*').eq('id', id).single(),
-    fetch('/config/teaching_suggestions.json').then(r => r.json())
+    fetch(import.meta.env.BASE_URL + 'config/teaching_suggestions.json').then(r => r.json())
   ])
   assessment.value = aRes.data
   suggestions.value = sugRes
